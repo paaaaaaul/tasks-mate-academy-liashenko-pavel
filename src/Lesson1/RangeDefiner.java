@@ -1,9 +1,8 @@
-package Lesson1.Ranges;
+package Lesson1;
 
 import java.util.Scanner;
 
 public class RangeDefiner {
-
     public static String defineTheRange() {
         Scanner in = new Scanner(System.in);
 
@@ -43,5 +42,10 @@ public class RangeDefiner {
         builder.append("]");
         System.out.println(builder.toString());
         return builder.toString();
+
+    }
+
+    public static void main(String[] args) {
+        RangeDefiner.defineTheRange();
     }
 }

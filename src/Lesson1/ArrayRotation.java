@@ -25,7 +25,6 @@ package Lesson1;
 import java.util.Scanner;
 
 public class ArrayRotation {
-
     public static void moveToEnd(int arr[], int n, int k) {
         for (int i = 0; i < k; i++) {           // к примеру, к = 2, и массиве {1, 2, 3, 4, 5, 6}
             int x = arr[0];                     // в этот массив запишем
@@ -53,5 +52,6 @@ public class ArrayRotation {
         for (int i = 0; i < n; ++i) {
             System.out.print(arr[i] + " "); //выводим результат в консоль
         }
+
     }
 }
