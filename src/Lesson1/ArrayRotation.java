@@ -54,5 +54,4 @@ public class ArrayRotation {
             arr[n - 1] = x;                     // на каждом проходе
         }
     }
-
 }
