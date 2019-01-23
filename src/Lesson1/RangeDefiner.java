@@ -3,7 +3,6 @@ package Lesson1;
 import java.util.Scanner;
 
 public class RangeDefiner {
-
     public static void main(String[] args) {
         RangeDefiner.defineTheRange();
     }
