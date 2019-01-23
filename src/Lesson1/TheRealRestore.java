@@ -3,6 +3,11 @@ package Lesson1;
 import java.util.Scanner;
 
 public class TheRealRestore {
+
+    public static void main(String[] args) {
+        TheRealRestore.restoreTheArray();
+    }
+
     public static String restoreTheArray() {
         Scanner scanner = new Scanner(System.in);
         int size = scanner.nextInt();
@@ -50,10 +55,5 @@ public class TheRealRestore {
         }
         System.out.println("\n Restoring is finished");
         return "finished";
-
-    }
-
-    public static void main(String[] args) {
-        TheRealRestore.restoreTheArray();
     }
 }
