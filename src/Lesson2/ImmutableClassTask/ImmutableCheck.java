@@ -1,7 +1,6 @@
 package Lesson2.ImmutableClassTask;
 
 public class ImmutableCheck {
-
     public static void main(String[] args) {
         Age age = new Age();
         age.setDay(1);
@@ -14,5 +13,4 @@ public class ImmutableCheck {
         girl.getAge().setYear(1993);
         System.out.println("Dina before modification: " + girl.getAge().getYear());
     }
-
 }

@@ -1,7 +1,6 @@
 package Lesson2.ImmutableClassTask;
 
 public class ImmutableGirl {
-
     private final int id;
     private final String name;
     private final Age age;

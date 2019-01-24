@@ -1,7 +1,6 @@
 package Lesson2.ImmutableClassTask;
 
 public class Age {
-
     private int day;
     private int month;
     private int year;
