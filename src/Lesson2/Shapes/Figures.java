@@ -7,6 +7,26 @@ package Lesson2.Shapes;
 которые будут выполнять сериализацию дерева фигур в формат XML и JSON.
 */
 
-public class Figures {
 
+import java.util.ArrayList;
+
+public class Figures {
+   private ArrayList figures = new ArrayList();
+   public Figures(){}
+
+    public ArrayList getFigures() {
+        return figures;
+    }
+
+    public void setFigures(ArrayList figures) {
+        this.figures = figures;
+    }
+
+    @Override
+    public String toString() {
+
+      // ??????
+
+       return figures + " ";
+    }
 }
