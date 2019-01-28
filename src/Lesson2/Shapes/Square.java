@@ -1,8 +1,8 @@
 package Lesson2.Shapes;
 
-public class Square {
-    private String color;
-    private int oneSideLength;
+public class Square extends Figures {
+    private static String color;
+    private static int oneSideLength;
 
     public Square(){}
 

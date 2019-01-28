@@ -2,7 +2,7 @@ package Lesson2.Shapes;
 
 import java.io.Serializable;
 
-public class Triangle implements Serializable{
+public class Triangle extends Figures implements Serializable{
     private String color;
     private int sideALength;
     private int sideBLength;

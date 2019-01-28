@@ -9,17 +9,22 @@ package Lesson2.Shapes;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Figures {
-   private ArrayList figures = new ArrayList();
+   private List<Circle> figures = new ArrayList<Circle>();
    public Figures(){}
 
-    public ArrayList getFigures() {
+    public List getFigures() {
         return figures;
     }
 
     public void setFigures(ArrayList figures) {
         this.figures = figures;
+    }
+
+    public void addFigure(Circle circle) {
+        figures.add(circle);
     }
 
     @Override

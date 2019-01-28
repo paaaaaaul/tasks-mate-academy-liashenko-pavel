@@ -1,6 +1,6 @@
 package Lesson2.ImmutableClassTask;
 
-public class ImmutableGirl {
+public class ImmutableGirl implements Cloneable {
     private final int id;
     private final String name;
     private final Age age;
@@ -9,6 +9,7 @@ public class ImmutableGirl {
         this.name = name;
         this.id = id;
         Age cloneAge = new Age();
+//        Age.clone();
         cloneAge.setDay(age.getDay());
         cloneAge.setMonth(age.getMonth());
         cloneAge.setYear(age.getYear());

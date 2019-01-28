@@ -3,12 +3,16 @@ package Lesson2.Shapes;
 import java.io.Serializable;
 import java.util.List;
 
-public class Circle implements Serializable {
+public class Circle extends Figures implements Serializable {
     private List<Circle> circles;
-    private int diameter;
-    private String color;
+    public static int diameter;
+    private static String color;
 
     public Circle() {}
+
+    public void addToList(Circle circle) {
+        circles.add(circle);
+    }
 
     public Circle(int diameter, String color) {
         this.diameter = diameter;
@@ -23,18 +27,22 @@ public class Circle implements Serializable {
         return color;
     }
 
-    public String toJson() {
+    public static void toJson() {
+        System.out.println("{" + "\n" + "\t" + "\"" + "color" + "\"" + ":" + " " + "\"" + color + "\"" + "," + "\n" +
+                "\t" + "\"" + "diameter" + "\"" + ":" + " " + "\"" + diameter + "\"" + "\n" + "}" + ",");
+    }
 
-        String openingBr = "{" + "\n" + "\t";
-        String closingBr =  "\n" + "}";
-        String quote = "\"";
-        String twoDots = ":";
-        String comma = ",";
+    public static void toXml() {
+            /*
 
+            <xml>
+                <color>color</color>
+                <diameter>diameter</diameter>
+            </xml>
 
+             */
 
-        System.out.println(openingBr + quote + "color" + quote + twoDots + " " + quote + color + quote + comma + "\n" +
-                 "\t" + quote + "diameter" + quote + twoDots + " " + quote + diameter + quote + closingBr + comma);
-        return "";
+        System.out.println("<xml>" + "\n\t" + "<color>" + color + "</color>" + "\n\t" + "<diameter>" + diameter + "</diameter>" +
+        "\n" + "</xml>" + ",");
     }
 }

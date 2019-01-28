@@ -5,15 +5,14 @@ public class Bicycle {
     private String bikeType;
     private String bikeSize;
 
-    private boolean haveSuspention;
+    private boolean hasSuspention;
     private boolean haveMultipleGears;
 
-    public Bicycle(BikeBuilder bikeBuilder) {
-        this.bikeCompany = bikeBuilder.bikeCompany;
-        this.bikeType = bikeBuilder.bikeType;
-        this.bikeSize = bikeBuilder.bikeSize;
-        this.haveSuspention = bikeBuilder.haveSuspention;
-        this.haveMultipleGears = bikeBuilder.haveMultipleGears;
+    public Bicycle(String bikeCompany, String bikeType, String bikeSize, boolean hasSuspention, boolean haveMultipleGears) {
+
+    }
+
+    public Bicycle(BicycleBuilder bicycleBuilder) {
     }
 
     public String getBikeCompany() {
@@ -28,34 +27,34 @@ public class Bicycle {
         return bikeSize;
     }
 
-    public boolean isHaveSuspention() {
-        return haveSuspention;
+    public boolean isHasSuspention() {
+        return hasSuspention;
     }
 
     public boolean isHaveMultipleGears() {
         return haveMultipleGears;
     }
 
-    public static class BikeBuilder{
+    public static class BicycleBuilder{
         private String bikeCompany;
         private String bikeType;
         private String bikeSize;
 
-        private boolean haveSuspention;
+        private boolean hasSuspention;
         private boolean haveMultipleGears;
 
-        public BikeBuilder(String bikeCompany, String bikeType, String bikeSize) {
+        public BicycleBuilder(String bikeCompany, String bikeType, String bikeSize) {
             this.bikeCompany = bikeCompany;
             this.bikeType = bikeType;
             this.bikeSize = bikeSize;
         }
 
-        public BikeBuilder doBikeHaveSuspention(boolean haveSuspention) {
-            this.haveSuspention = haveSuspention;
+        public BicycleBuilder doBikeHaveSuspention(boolean hasSuspention) {
+            this.hasSuspention = hasSuspention;
             return this;
         }
 
-        public BikeBuilder doBikeHaveMultipleGears(boolean haveMultipleGears) {
+        public BicycleBuilder doBikeHaveMultipleGears(boolean haveMultipleGears) {
             this.haveMultipleGears = haveMultipleGears;
             return this;
         }
