@@ -8,8 +8,6 @@ public class Circle extends Figures implements Serializable {
     public static int diameter;
     private static String color;
 
-    public Circle() {}
-
     public void addToList(Circle circle) {
         circles.add(circle);
     }
@@ -25,11 +23,6 @@ public class Circle extends Figures implements Serializable {
 
     public String getColor() {
         return color;
-    }
-
-    public static void toJson() {
-        System.out.println("{" + "\n" + "\t" + "\"" + "color" + "\"" + ":" + " " + "\"" + color + "\"" + "," + "\n" +
-                "\t" + "\"" + "diameter" + "\"" + ":" + " " + "\"" + diameter + "\"" + "\n" + "}" + ",");
     }
 
     public static void toXml() {

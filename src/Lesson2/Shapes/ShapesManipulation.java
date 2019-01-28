@@ -6,15 +6,21 @@ public class ShapesManipulation {
 
         Figures circle = new Circle(13, "blue");
         Figures square = new Square(48, "green");
-//        Figures triangle = new Triangle("red", 12, 45, 87);
-
+        Figures triangle = new Triangle("red", 12, 45, 87);
 
         group.addShape(circle);
         group.addShape(square);
+        group.addShape(triangle);
 
-        group.toJson();
 
-        Circle.toXml();
+
+        SerializationJson.toJson((Circle) circle);
+        SerializationJson.toJson((Square) square);
+        SerializationJson.toJson((Triangle) triangle);
+
+        SerializationXml.toXml((Circle) circle);
+
+        SerializationJson.toJson((Group) group);
 
 
     }

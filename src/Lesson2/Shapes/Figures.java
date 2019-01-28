@@ -30,7 +30,6 @@ public class Figures {
     @Override
     public String toString() {
 
-      // ??????
 
        return figures + " ";
     }

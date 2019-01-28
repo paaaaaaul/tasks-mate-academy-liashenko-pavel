@@ -13,4 +13,12 @@ public class Group {
     public void rtemoveFigure(Figures figure) {
         figures.remove(figure);
     }
+
+    public void merge() {
+        for (Figures f : figures) {
+            System.out.println(figures);
+        }
+//        System.out.println(figures.size());
+    }
+
 }
