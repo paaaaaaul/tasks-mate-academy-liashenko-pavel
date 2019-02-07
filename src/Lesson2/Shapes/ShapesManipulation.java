@@ -8,6 +8,7 @@ public class ShapesManipulation {
         Figures square = new Square(48, "green");
         Figures triangle = new Triangle("red", 12, 45, 87);
 
+
         group.addShape(circle);
         group.addShape(square);
         group.addShape(triangle);
@@ -25,3 +26,8 @@ public class ShapesManipulation {
 
     }
 }
+
+
+// в группе есть список фигур
+
+//
