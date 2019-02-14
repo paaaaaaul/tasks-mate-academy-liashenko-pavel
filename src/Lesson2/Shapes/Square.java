@@ -1,6 +1,6 @@
 package Lesson2.Shapes;
 
-public class Square extends Figures {
+public class Square implements FigureSize {
     private static String color;
     private static int oneSideLength;
 
@@ -17,5 +17,10 @@ public class Square extends Figures {
 
     public int getOneSideLength() {
         return oneSideLength;
+    }
+
+    @Override
+    public void figureSize() {
+        System.out.println(getColor());
     }
 }

@@ -1,8 +1,6 @@
 package Lesson2.Shapes;
 
-import java.io.Serializable;
-
-public class Triangle extends Figures implements Serializable{
+public class Triangle implements FigureSize{
     private String color;
     private int sideALength;
     private int sideBLength;
@@ -31,5 +29,10 @@ public class Triangle extends Figures implements Serializable{
 
     public int getSideCLength() {
         return sideCLength;
+    }
+
+    @Override
+    public void figureSize() {
+        System.out.println(getColor());
     }
 }

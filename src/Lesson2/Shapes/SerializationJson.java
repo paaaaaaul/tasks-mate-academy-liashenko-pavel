@@ -1,9 +1,22 @@
 package Lesson2.Shapes;
 
 public class SerializationJson {
-    public static void toJson(Circle circle) {
-        System.out.println("{" + "\n" + "\t" + "\"" + "color" + "\"" + ":" + " " + "\"" + circle.getColor() + "\"" + "," + "\n" +
-                    "\t" + "\"" + "diameter" + "\"" + ":" + " " + "\"" + circle.getDiameter() + "\"" + "\n" + "}" + ",");
+
+    @Override
+    public String toString() {
+        return "SerializationJson{}";
+    }
+
+    public static String toJson(Circle circle) {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("{" + "\n" + "\t" + "\"" + "color" + "\"" + ":" + " " + "\"" + circle.getColor() + "\"" + "," + "\n");
+        stringBuilder.append("\t" + "\"" + "diameter" + "\"" + ":" + " " + "\"" + circle.getDiameter() + "\"" + "\n" + "}" + ",");
+
+        System.out.println(stringBuilder);
+
+        return stringBuilder.toString();
+//        System.out.println("{" + "\n" + "\t" + "\"" + "color" + "\"" + ":" + " " + "\"" + circle.getColor() + "\"" + "," + "\n" +
+//                    "\t" + "\"" + "diameter" + "\"" + ":" + " " + "\"" + circle.getDiameter() + "\"" + "\n" + "}" + ",");
     }
 
     public static void toJson(Square square) {
@@ -12,16 +25,15 @@ public class SerializationJson {
     }
 
     public static void toJson(Triangle triangle) {
+
+
         System.out.println("{" + "\n" + "\t" + "\"" + "color" + "\"" + ":" + " " + "\"" + triangle.getColor() + "\"" + "," + "\n" +
                 "\t" + "\"" + "side A length" + "\"" + ":" + " " + "\"" + triangle.getSideALength() + "\"" + "," + "\n" +
                 "\t" + "\"" + "side B length" + "\"" + ":" + " " + "\"" + triangle.getSideBLength() + "\"" + "," + "\n" +
                 "\t" + "\"" + "side C length" + "\"" + ":" + " " + "\"" + triangle.getSideCLength() + "\"" + "," + "\n" + "}" + ",");
     }
 
-    public static void toJson(Group group) {
-        group.merge();
-//                for (Group g: group) {
+//    public static void toJson(Group group) {
 //
-//        }
-    }
+//    }
 }

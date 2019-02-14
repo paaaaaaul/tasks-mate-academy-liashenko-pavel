@@ -1,33 +1,41 @@
 package Lesson2.Shapes;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ShapesManipulation {
     public static void main(String[] args) {
-        Group group = new Group();
 
-        Figures circle = new Circle(13, "blue");
-        Figures square = new Square(48, "green");
-        Figures triangle = new Triangle("red", 12, 45, 87);
+        List<FigureSize> group = new ArrayList<>();
 
-
-        group.addShape(circle);
-        group.addShape(square);
-        group.addShape(triangle);
+//        Group group = new Group();
+//        Circle circle = new Circle(13, "blue");
+//        Square square = new Square(48, "green");
+//        Triangle triangle = new Triangle("red", 12, 45, 87);
 
 
+        group.add(new Circle(13, "blue"));
+        group.add(new Square(48, "green"));
+        group.add(new Triangle("red", 12, 45, 87));
 
-        SerializationJson.toJson((Circle) circle);
-        SerializationJson.toJson((Square) square);
-        SerializationJson.toJson((Triangle) triangle);
+        Group group1 = new Group();
+        group1.figureSize();
 
-        SerializationXml.toXml((Circle) circle);
+        for (FigureSize str: group) {
+            System.out.println(str);
+        }
 
-        SerializationJson.toJson((Group) group);
+
+
+
+//        SerializationJson.toJson(circle);
+//        SerializationJson.toJson(square);
+//        SerializationJson.toJson(triangle);
+//
+//        SerializationXml.toXml(circle);
+
 
 
     }
 }
 
-
-// в группе есть список фигур
-
-//

@@ -1,9 +1,8 @@
 package Lesson2.Shapes;
 
-import java.io.Serializable;
 import java.util.List;
 
-public class Circle extends Figures implements Serializable {
+public class Circle implements FigureSize {
     private List<Circle> circles;
     public static int diameter;
     private static String color;
@@ -25,17 +24,12 @@ public class Circle extends Figures implements Serializable {
         return color;
     }
 
-    public static void toXml() {
-            /*
 
-            <xml>
-                <color>color</color>
-                <diameter>diameter</diameter>
-            </xml>
-
-             */
-
-        System.out.println("<xml>" + "\n\t" + "<color>" + color + "</color>" + "\n\t" + "<diameter>" + diameter + "</diameter>" +
-        "\n" + "</xml>" + ",");
+    @Override
+    public void figureSize() {
+        System.out.println(getColor());
     }
+
+
+
 }

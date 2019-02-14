@@ -3,22 +3,34 @@ package Lesson2.Shapes;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Group {
-    private List <Figures> figures = new ArrayList<Figures>();
+public class Group implements FigureSize{
+    private List<FigureSize> figureSizes;
 
-    public void addShape(Figures figure) {
-        figures.add(figure);
+    public Group(List<FigureSize> figureSizes) {
+        this.figureSizes = new ArrayList<>(figureSizes);
     }
 
-    public void rtemoveFigure(Figures figure) {
-        figures.remove(figure);
+    public Group() {
+
     }
 
-    public void merge() {
-        for (Figures f : figures) {
-            System.out.println(figures);
+    public void addFigure(FigureSize figureSize) {
+        figureSizes.add(figureSize);
+    }
+
+//    public void rtemoveFigure(Figures figure) {
+//        figures.remove(figure);
+//    }
+
+    public List<FigureSize> getFigureSize() {
+        System.out.println(figureSizes);
+        return figureSizes;
+    }
+
+    @Override
+    public void figureSize() {
+        for (FigureSize f: figureSizes) {
+            f.figureSize();
         }
-//        System.out.println(figures.size());
     }
-
 }
