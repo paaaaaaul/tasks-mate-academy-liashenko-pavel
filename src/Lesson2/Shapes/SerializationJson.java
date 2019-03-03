@@ -2,11 +2,6 @@ package Lesson2.Shapes;
 
 public class SerializationJson {
 
-    @Override
-    public String toString() {
-        return "SerializationJson{}";
-    }
-
     public static String toJson(Circle circle) {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("{" + "\n" + "\t" + "\"" + "color" + "\"" + ":" + " " + "\"" + circle.getColor() + "\"" + "," + "\n");
@@ -33,7 +28,16 @@ public class SerializationJson {
                 "\t" + "\"" + "side C length" + "\"" + ":" + " " + "\"" + triangle.getSideCLength() + "\"" + "," + "\n" + "}" + ",");
     }
 
-//    public static void toJson(Group group) {
-//
-//    }
+    public static void toJson(Group group) {
+
+            switch () {
+
+            }
+
+
+
+
+    }
 }
+
+
