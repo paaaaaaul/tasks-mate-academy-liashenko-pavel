@@ -1,5 +1,7 @@
 package Lesson2.ShapesSerialization;
 
+import java.util.List;
+
 public class SerializeXML {
 
     public static String anyShapeEncoding(Shape shape) {
@@ -25,11 +27,9 @@ public class SerializeXML {
 
 
 
-
-
     public static String triangleToXML(Triangle triangle) {
         String triangleXML = "<Triangle>\n";
-        triangleXML += "\t<side>" + triangle.getSideLength() + "</side>";
+        triangleXML += "\t<side>" + triangle.getSideLength() + "</side>\n";
         triangleXML += "</Triangle>\n";
         return triangleXML;
     }
@@ -53,8 +53,13 @@ public class SerializeXML {
     private static String groupToXml(Group group) {
         StringBuilder xmlString = new StringBuilder();
         xmlString.append("<Group>\n\t<shapes>\n");
-
-
+        List<Shape> shapes = group.getShapes();
+        for (Shape shape : shapes) {
+            String[] lines = shapeToXml(shape).split("\n");
+            for (String line: lines) {
+                xmlString.append("\t\t").append(line).append("\n");
+            }
+        }
         xmlString.append("\t</shapes>\n</Group>\n");
         return xmlString.toString();
     }
