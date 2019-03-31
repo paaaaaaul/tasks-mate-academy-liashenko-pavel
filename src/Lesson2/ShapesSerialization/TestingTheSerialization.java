@@ -3,6 +3,11 @@ package Lesson2.ShapesSerialization;
 import java.util.ArrayList;
 import java.util.List;
 
+//2.6 Вам нужно написать программу содержащую три класса Triangle, Circle, Square,
+//а так же класс Group, который будет содержать любое количество фигур включая другие группы.
+//Так же нужно написать несколько классов,
+//которые будут выполнять сериализацию дерева фигур в формат XML и JSON.
+
 public class TestingTheSerialization {
     public static void main(String[] args) {
         List<Shape> listA = new ArrayList<>();
@@ -28,5 +33,10 @@ public class TestingTheSerialization {
         System.out.println("-----------XML-----------");
         System.out.println();
         System.out.println(SerializeXML.anyShapeEncoding(mainList));
+
+        System.out.println("-----------JSON-----------");
+        System.out.println();
+        System.out.println(SerializeJSON.anyShapeEncoding(mainList));
+
     }
 }
